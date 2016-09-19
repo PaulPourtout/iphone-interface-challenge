@@ -1,9 +1,18 @@
 $(document).ready(function(){
-  // $("#menu-scroll-bot").hide();
-  $("#panel-bottom-btn-container").click(function(){
-    // $("#menu-scroll-bot").toggle("slide", "bottom", "slow");
+  $('#menu-scroll-bot').hide();
+  $('.filtre-modal').hide();
 
-    $("#close-scroll-menu").slideToggle("slow");
+  $("#panel-bottom-btn-container, #close-scroll-menu").click(function(){
+    $("#menu-scroll-bot").slideToggle(500);
+    $('.filtre-modal').fadeToggle(500);
+  });
+
+  $('.menu-icon').click(function(){
+    $(this).toggleClass('active-icon');
+  });
+
+  $('.fa-play').click(function(){
+    $(this).toggleClass('fa-pause');
   });
 
 });
