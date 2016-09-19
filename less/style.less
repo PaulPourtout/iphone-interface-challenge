@@ -1,0 +1,206 @@
+// out: ../css/style.css, sourcemap: true, compress: true
+
+// VARIABLES :
+@white : #fff;
+@black: #000;
+@transparentGrey: rgba(255, 255, 255, 0.4);
+@transparentGrey2: rgba(119, 119, 119, 0.61);
+@transparentGrey3: rgba(201, 197, 197, 0.8);
+@transparentWhite: rgba(255, 255, 255, 0.8);
+body {
+  margin: 0;
+  background-image: url(../img/background.jpeg);
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  box-sizing: border-box;
+}
+
+.panel-btn-container {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  .panel-button {
+    margin: auto;
+    width: 40px;
+    height: 8px;
+    border-radius: 20px;
+    background-color: @transparentGrey;
+  }
+}
+
+header {
+  color: @white;
+  ul {
+    display: flex;
+    align-items: center;
+    li {
+      margin: 0 5px;
+    }
+  }
+
+  #panel-top-btn-container {
+    top: 10px;
+  }
+
+  #left-header, #right-header {
+    margin: 5px 0;
+  }
+
+  #left-header {
+    justify-content: flex-start;
+    .round {
+      margin: 0 1px;
+      height: 7px;
+      width: 7px;
+      border-radius: 100%;
+      border: 1px solid @white;
+      background-color: @white;
+    }
+    .empty {
+      background-color: transparent;
+    }
+  }
+  #right-header {
+    justify-content: flex-end;
+  }
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 85vh;
+  color: @white;
+  #date {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    h1 {
+      font-size: 6rem;
+      font-weight: 100;
+      margin: 30px 0 5px 0;
+    }
+    p {
+      margin: 0;
+      font-size: 1.2rem;
+    }
+  }
+  #unlock {
+    align-items: center;
+    h2 {
+      span {
+        background-image: url(../img/chevron-right.png);
+        background-size: contain;
+        height: 30px;
+        width: 30px;
+        filter: invert(100);
+        display: inline-block;
+      }
+      font-size: 1.5rem;
+      color: @white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+#menu-scroll-bot {
+  background-color: @transparentGrey3;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .row {
+    width: 100%;
+  }
+
+  #close-scroll-menu {
+    display: flex;
+    justify-content: center;
+    i {
+      font-size: 2rem;
+    }
+  }
+  ul {
+    margin: auto;
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    .menu-icon {
+      background-color: @transparentGrey2;
+      color: @black;
+      border-radius: 100%;
+      height: 50px;
+      width: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      box-shadow: none;
+
+      i {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  #luminosity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    background-color: @transparentGrey2;
+    form {
+      margin: 0 10px;
+      width: 70%;
+      input, p {
+        margin: 0;
+      }
+      input {
+        border: none;
+
+      }
+    }
+  }
+
+}
+
+
+footer {
+  bottom: 0;
+  #panel-bottom-btn-container {
+    bottom: 15px;
+  }
+  #camera-container {
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    a {
+      color: @transparentGrey;
+      .fa-camera {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
+
+.blink {
+  animation: blink 3s ease infinite;
+}
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.25;
+  }
+}
