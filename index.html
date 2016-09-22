@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
   <link rel="stylesheet" href="css/style.css" media="screen">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- Compiled and minified CSS -->
 
 
@@ -106,9 +107,7 @@
         <i class="fa fa-sun-o"></i>
       </div>
       <form action="#">
-        <p class="range-field">
-          <input type="range" id="test5" min="0" max="100" />
-        </p>
+        <input type="range" min="0" max="100" />
       </form>
       <div>
         <i class="fa fa-sun-o"></i>
@@ -116,12 +115,70 @@
     </div>
 
     <div class="row" id="music">
+      <div id="music-title">
+        <h3 class="hide">Schism</h3>
+        <p class="hide">
+          Tool - Lateralus
+        </p>
+      </div>
       <ul>
         <li><i class="fa fa-backward"></i></li>
         <li><i class="fa fa-play"></i></li>
         <li><i class="fa fa-forward"></i></li>
       </ul>
+      <div class="row" id="sound-volume">
+        <div>
+          <i class="fa fa-volume-off"></i>
+        </div>
+        <form action="#">
+          <input type="range" min="0" max="100" />
+        </form>
+        <div>
+          <i class="fa fa-volume-up"></i>
+        </div>
+      </div>
+    </div>
 
+    <div class="row" id="airplay">
+      <div class="col s6 container-airplay">
+        <figure id="airdrop-pict">
+        </figure>
+        <p>
+          Airdrop:<br>Everyone
+        </p>
+      </div>
+      <div class="col s6 container-airplay">
+        <figure id="airplay-pict">
+        </figure>
+        <p>
+          Airplay
+        </p>
+      </div>
+    </div>
+
+    <div class="row" id="buttons-down">
+      <ul>
+        <li>
+          <a href="#" class="menu-icon" type="button" name="button">
+            <i class="material-icons">highlight</i>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="menu-icon" type="button" name="button">
+            <i class="fa fa-clock-o"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="menu-icon" type="button" name="button">
+            <i class="fa fa-calculator"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="menu-icon" type="button" name="button">
+            <i class="fa fa-camera"></i>
+          </a>
+        </li>
+      </ul>
     </div>
   </div> <!-- FIN MENU SCROLL -->
 
