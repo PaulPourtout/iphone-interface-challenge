@@ -1,45 +1,160 @@
 $(document).ready(function(){
+
+  // MODAL PAGE LOCK
   $('#menu-scroll-bot').hide();
   $('.filtre-modal').hide();
+  $('.btn-active').hide();
+
+  // CLAVIER PAGE MESSAGE
   $('#keyboard').hide();
 
+
+
+// DATE PAGE LOCK
+
+// INSTANT PRESENT
+var now = new Date();
+
+// JOURS DE LA SEMAINE
+var weekday = new Array(7);
+weekday[0]=  "Sunday";
+weekday[1] = "Monday";
+weekday[2] = "Tuesday";
+weekday[3] = "Wednesday";
+weekday[4] = "Thursday";
+weekday[5] = "Friday";
+weekday[6] = "Saturday";
+var day = weekday[now.getDay()];
+
+// MOIS DE L'ANNEE
+var month = new Array();
+month[0] = "January";
+month[1] = "February";
+month[2] = "March";
+month[3] = "April";
+month[4] = "May";
+month[5] = "June";
+month[6] = "July";
+month[7] = "August";
+month[8] = "September";
+month[9] = "October";
+month[10] = "November";
+month[11] = "December";
+var TodaysMonth = month[now.getMonth()];
+
+// AFFICHAGE DATE PAGE LOCK
+$('#date h1').text(now.getHours() + ":" + now.getMinutes());
+$('#date p').text(day + " " + now.getDate() + " " + TodaysMonth);
+
+// AFFICHAGE HEURE HEADER
+$('.currentHour').text(now.getHours() + ":" + now.getMinutes());
+
+  //MODAL PAGE LOCK
   $("#panel-bottom-btn-container, #close-scroll-menu").click(function(){
     $("#menu-scroll-bot").slideToggle(500);
     $('.filtre-modal').fadeToggle(500);
   });
 
-  $('.menu-icon').click(function(){
+  // ANIMATION BOUTONS WIFI,ETC.
+  $('#modal-plane').click(function(){
     $(this).toggleClass('active-icon');
+    $('#header-plane').fadeToggle();
   });
 
+  $('#modal-wifi').click(function(){
+    $(this).toggleClass('active-icon');
+    $('#header-wifi').toggle();
+    $('#header-3g').toggle();
+  });
+
+  $('#modal-bluetooth').click(function(){
+    $(this).toggleClass('active-icon');
+    $('#header-bluetooth').fadeToggle();
+  });
+
+  $('#modal-moon').click(function(){
+    $(this).toggleClass('active-icon');
+    $('#header-moon').fadeToggle();
+  });
+
+  $('#modal-lock').click(function(){
+    $(this).toggleClass('active-icon');
+    $('#header-lock').fadeToggle();
+  });
+
+
+
+
+  // REGLAGE LUMINOSITE
+  $(document).on('input', '#luminosity-settings', function(){
+    var luminosityValue = $('#luminosity-settings').val();
+
+    $('.filtre-brightness').css('opacity',luminosityValue);
+    console.log(luminosityValue);
+  });
+
+
+  // PLAY MUSIC
   $('.fa-play').click(function(){
     $(this).toggleClass('fa-pause');
     $('#music-title').children().toggleClass('hide');
+var musicplay = new Audio('../sound/Tool - Schism.mp3');
+    var playing = false;
+    if (playing === false) {
+      musicplay.play();
+      playing = true;
+    }
+    else {
+      alert('gogog');
+      $('.musicplay')[1].pause();
+      playing = false;
+    }
+
   });
 
+  // MUSIC PLAYER
+
+  // $('.musicplay').trigger('.fa-pause');
+
+  // ANIMATION AIRPLAY
   $('.container-airplay').click(function(){
     $(this).children().toggleClass('airplay-active');
   });
 
+
+
+
+
+
+
+  // PAGE MESSAGES
+
+$(window).keypress(function(e){
+  if (e.wich == 13) {
+  alert('okkkkk');
+  }
+});
+
+
   // APPARITION CLAVIER MESSAGES
-  var keyboard = false;
-  $('#writing-area').click(function(){
-    keyboard = true;
-    if (keyboard === true) {
-      $('#keyboard').slideDown(500);
-    }
-    else {
-      $('#keyboard').slideUp(500);
-    }
-  });
-
-  $('#messages-sent').click(function(){
-    keyboard = false;
-    $('#keyboard').slideUp(500)
-  });
-
-  // TOUCHE MAJUSCULE
-  $('.maj').click(function(){
-      $('.letter').toggleClass('toUppercase');
-  });
+  //   var keyboard = false;
+  //   $('#writing-area').click(function(){
+  //     keyboard = true;
+  //     if (keyboard === true) {
+  //       $('#keyboard').slideDown(500);
+  //     }
+  //     else {
+  //       $('#keyboard').slideUp(500);
+  //     }
+  //   });
+  //
+  //   $('#messages-sent').click(function(){
+  //     keyboard = false;
+  //     $('#keyboard').slideUp(500)
+  //   });
+  //
+  //   // TOUCHE MAJUSCULE
+  //   $('.maj').click(function(){
+  //     $('.letter').toggleClass('toUppercase');
+  //   });
 });

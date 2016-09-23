@@ -21,6 +21,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
 </head>
 <body id="lock-screen">
+  <div class="filtre-brightness">
+
+  </div>
   <div class="filtre-modal">
   </div>
   <header class="row">
@@ -39,22 +42,30 @@
         </ul>
       </li>
       <li>VIRGIN</li>
-      <li><i class="fa fa-wifi"></i></li>
+      <li id="header-wifi" class="btn-active"><i class="fa fa-wifi"></i></li>
+      <li id="header-3g">3G</li>
     </ul>
     <ul id="right-header" class="col s6">
-      <li><i class="fa fa-bluetooth-b"></i></li>
+      <li id="header-plane" class="btn-active"><i class="fa fa-plane"></i></li>
+      <li id="header-bluetooth" class="btn-active"><i class="fa fa-bluetooth-b"></i></li>
+      <li id="header-moon" class="btn-active"><i class="fa fa-moon-o"></i></li>
+      <li id="header-lock" class="btn-active"><i class="fa fa-lock"></i></li>
+
       <li>82%</li>
       <li><i class="fa fa-battery-three-quarters"></i></li>
       <li><i class="fa fa-bolt"></i></li>
     </ul>
   </header>
 
+  <div class="extra-spacing-1">
+  </div>
+
   <section id="main">
     <div class="row" >
       <div class="col s12" id="date">
         <h1>2<span class="blink">:</span>29</h1>
         <p>
-          Friday, Septembre 16
+          Fridfesfay, Sersgseg 16
         </p>
       </div>
     </div>
@@ -62,7 +73,7 @@
     <div class="row" >
       <div class="col s12" id="unlock">
         <a href="main.html">
-          <h2><span></span>  Slide to unlock</h2>
+          <h2><i class="fa fa-angle-right"></i>  Slide to unlock</h2>
         </a>
       </div>
     </div>
@@ -70,32 +81,32 @@
 
   <div id="menu-scroll-bot" class="container">
     <a href="#" class="row" id="close-scroll-menu">
-      <span><i class="fa fa-chevron-down"></i></span>
+      <span class="arrow-down-img"></span>
     </a>
     <div class="row">
       <ul>
         <li>
-          <button class="menu-icon" type="button" name="button">
+          <button id="modal-plane" class="menu-icon" type="button" name="button">
             <i class="fa fa-plane"></i>
           </button>
         </li>
         <li>
-          <button class="menu-icon" type="button" name="button">
+          <button id="modal-wifi" class="menu-icon" type="button" name="button">
             <i class="fa fa-wifi"></i>
           </button>
         </li>
         <li>
-          <button class="menu-icon" type="button" name="button">
+          <button id="modal-bluetooth" class="menu-icon" type="button" name="button">
             <i class="fa fa-bluetooth-b"></i>
           </button>
         </li>
         <li>
-          <button class="menu-icon" type="button" name="button">
+          <button id="modal-moon" class="menu-icon" type="button" name="button">
             <i class="fa fa-moon-o"></i>
           </button>
         </li>
         <li>
-          <button class="menu-icon" type="button" name="button">
+          <button id="modal-lock" class="menu-icon" type="button" name="button">
             <i class="fa fa-lock"></i>
           </button>
         </li>
@@ -106,8 +117,8 @@
       <div>
         <i class="fa fa-sun-o"></i>
       </div>
-      <form action="#">
-        <input type="range" min="0" max="100" />
+      <form action="#" >
+        <input id="luminosity-settings" type="range" min="0" max="1" value="0" step="0.1" />
       </form>
       <div>
         <i class="fa fa-sun-o"></i>
@@ -115,6 +126,8 @@
     </div>
 
     <div class="row" id="music">
+      <!-- <audio class="musicplay" controls src="sound/Tool - Schism.mp3">
+      </audio> -->
       <div id="music-title">
         <h3 class="hide">Schism</h3>
         <p class="hide">

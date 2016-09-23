@@ -2,15 +2,21 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>iOS 15 - page principale</title>
+  <title>iOS 15</title>
+  <script
+  src="https://code.jquery.com/jquery-3.1.0.js"
+  integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk="
+  crossorigin="anonymous"></script>
   <script type="text/javascript" src="js/script.js">
   </script>
-  <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css" media="screen">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+
+
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
 </head>
@@ -31,7 +37,7 @@
         <li><i class="fa fa-wifi"></i></li>
       </ul>
       <ul id="center-header"class="col s4">
-        <li>4:21 PM</li>
+        <li class="currentHour">heure</li>
       </ul>
       <ul id="right-header" class="col s4">
         <li><i class="fa fa-bluetooth-b"></i></li>
@@ -52,13 +58,16 @@
     </div>
   </header>
 
+  <div class="extra-spacing-2">
+  </div>
+
   <section id="repertoire-main">
     <div class="row" id="search-container">
       <input type="text" name="search" placeholder="Rechercher">
     </div>
 
     <div class="row">
-      <a href="messages.html" class="col s11 offset-s1 contact-id-container">
+      <a href="messages.html" id="pierre" class="col s11 offset-s1 contact-id-container">
         <figure class="col s3 contact-pict">
         </figure>
         <div class="col s6 contact-name">
@@ -68,13 +77,13 @@
           </p>
         </div>
         <p class="col s3 contact-to-sms">
-          14:07 <span><i class="fa fa-chevron-right"></i></span>
+          14:07 <span><i class="fa fa-angle-right"></i></span>
         </p>
       </a>
     </div>
 
     <div class="row">
-      <a href="#" class="col s11 offset-s1 contact-id-container">
+      <a href="messages.html" id="pierrette" class="col s11 offset-s1 contact-id-container">
         <figure class="col s3 contact-pict">
         </figure>
         <div class="col s6 contact-name">
@@ -84,7 +93,7 @@
           </p>
         </div>
         <p class="col s3 contact-to-sms">
-          14:07 <span><i class="fa fa-chevron-right"></i></span>
+          14:07 <span><i class="fa fa-angle-right"></i></span>
         </p>
       </a>
     </div>
