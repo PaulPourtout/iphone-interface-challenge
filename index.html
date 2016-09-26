@@ -51,11 +51,20 @@
       <li id="header-moon" class="btn-active"><i class="fa fa-moon-o"></i></li>
       <li id="header-lock" class="btn-active"><i class="fa fa-lock"></i></li>
 
-      <li>82%</li>
-      <li><i class="fa fa-battery-three-quarters"></i></li>
+      <li class="charging-pourcentage"></li>
+      <li class="charging-battery"></li>
       <li><i class="fa fa-bolt"></i></li>
     </ul>
   </header>
+
+  <div class="no-battery">
+    <div class="apple-container">
+      <i class="fa fa-apple"></i>
+      <p>
+        FATAL ERROR
+      </p>
+    </div>
+  </div>
 
   <div class="extra-spacing-1">
   </div>
@@ -127,87 +136,87 @@
 
     <div class="row" id="music">
       <!-- <audio class="musicplay" controls src="sound/Tool - Schism.mp3">
-      </audio> -->
-      <div id="music-title">
-        <h3 class="hide">Schism</h3>
-        <p class="hide">
-          Tool - Lateralus
-        </p>
-      </div>
-      <ul>
-        <li><i class="fa fa-backward"></i></li>
-        <li><i class="fa fa-play"></i></li>
-        <li><i class="fa fa-forward"></i></li>
-      </ul>
-      <div class="row" id="sound-volume">
-        <div>
-          <i class="fa fa-volume-off"></i>
-        </div>
-        <form action="#">
-          <input type="range" min="0" max="100" />
-        </form>
-        <div>
-          <i class="fa fa-volume-up"></i>
-        </div>
-      </div>
+    </audio> -->
+    <div id="music-title">
+      <h3 class="hide">Schism</h3>
+      <p class="hide">
+        Tool - Lateralus
+      </p>
     </div>
-
-    <div class="row" id="airplay">
-      <div class="col s6 container-airplay">
-        <figure id="airdrop-pict">
-        </figure>
-        <p>
-          Airdrop:<br>Everyone
-        </p>
+    <ul>
+      <li><i class="fa fa-backward"></i></li>
+      <li><i class="fa fa-play"></i></li>
+      <li><i class="fa fa-forward"></i></li>
+    </ul>
+    <div class="row" id="sound-volume">
+      <div>
+        <i class="fa fa-volume-off"></i>
       </div>
-      <div class="col s6 container-airplay">
-        <figure id="airplay-pict">
-        </figure>
-        <p>
-          Airplay
-        </p>
+      <form action="#">
+        <input type="range" min="0" max="100" />
+      </form>
+      <div>
+        <i class="fa fa-volume-up"></i>
       </div>
     </div>
+  </div>
 
-    <div class="row" id="buttons-down">
-      <ul>
-        <li>
-          <a href="#" class="menu-icon" type="button" name="button">
-            <i class="material-icons">highlight</i>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="menu-icon" type="button" name="button">
-            <i class="fa fa-clock-o"></i>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="menu-icon" type="button" name="button">
-            <i class="fa fa-calculator"></i>
-          </a>
-        </li>
-        <li>
-          <a href="camera.html" class="menu-icon" type="button" name="button">
-            <i class="fa fa-camera"></i>
-          </a>
-        </li>
-      </ul>
+  <div class="row" id="airplay">
+    <div class="col s6 container-airplay">
+      <figure id="airdrop-pict">
+      </figure>
+      <p>
+        Airdrop:<br>Everyone
+      </p>
     </div>
-  </div> <!-- FIN MENU SCROLL -->
-
-
-
-  <footer>
-    <div id="panel-bottom-btn-container" class="panel-btn-container">
-      <a href="#" class="panel-button"></a>
+    <div class="col s6 container-airplay">
+      <figure id="airplay-pict">
+      </figure>
+      <p>
+        Airplay
+      </p>
     </div>
-    <div id="camera-container">
-      <a href="camera.html">
-        <span>
+  </div>
+
+  <div class="row" id="buttons-down">
+    <ul>
+      <li>
+        <a href="#" class="menu-icon bottom-icon" type="button" name="button">
+          <i class="material-icons">highlight</i>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="menu-icon bottom-icon" type="button" name="button">
+          <i class="fa fa-clock-o"></i>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="menu-icon bottom-icon" type="button" name="button">
+          <i class="fa fa-calculator"></i>
+        </a>
+      </li>
+      <li>
+        <a href="camera.html" class="menu-icon bottom-icon" type="button" name="button">
           <i class="fa fa-camera"></i>
-        </span>
-      </a>
-    </div>
-  </footer>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div> <!-- FIN MENU SCROLL -->
+
+
+
+<footer>
+  <div id="panel-bottom-btn-container" class="panel-btn-container">
+    <a href="#" class="panel-button"></a>
+  </div>
+  <div id="camera-container">
+    <a href="camera.html">
+      <span>
+        <i class="fa fa-camera"></i>
+      </span>
+    </a>
+  </div>
+</footer>
 </body>
 </html>

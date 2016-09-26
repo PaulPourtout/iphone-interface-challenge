@@ -115,6 +115,33 @@ header {
   height: 76px;
 }
 
+/*================= NO BATTERY =================== */
+.no-battery {
+  position: absolute;
+  background-color: @black;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 500;
+  .apple-container {
+    color: @white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    i {
+      font-size: 5rem;
+    }
+    p {
+      font-weight: bold;
+    }
+  }
+}
+
+
+
 /* ================ PAGE LOCK =============== */
 
 
@@ -549,28 +576,6 @@ footer {
     padding: 15px 0;
     .row {
       margin: 0;
-      .app-container {
-        &:nth-child(1) {
-          .app-icon {
-            background-image: url(../img/message.png);
-          }
-        }
-        &:nth-child(2) {
-          .app-icon {
-            background-image: url(../img/clock.png);
-          }
-        }
-        &:nth-child(3) {
-          .app-icon {
-            background-image: url(../img/clock.png);
-          }
-        }
-        &:nth-child(4) {
-          .app-icon {
-            background-image: url(../img/camera.png);
-          }
-        }
-      }
       p {
         margin-bottom: 0 !important;
       }
@@ -724,17 +729,17 @@ footer {
 /*================== MESSAGES ================ */
 
 #messages {
-
+  background-color: @white;
   .toUppercase {
     text-transform: uppercase;
   }
   #messages-sent {
-    height: 85vh;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     overflow: scroll;
     background-color: @white;
-    margin-bottom: 47px;
+    margin-bottom: 0;
     .message {
       max-width: 85%;
       padding: 10px;
@@ -759,8 +764,8 @@ footer {
         border: 10px solid;
         transform: rotate(90deg);
         border-radius: 10px;
-        z-index: -1;
-        border-color: transparent @blue @blue transparent;
+        z-index: 0;
+        border-color: transparent @blue transparent transparent;
       }
     }
     .other-user {
@@ -776,7 +781,7 @@ footer {
         bottom: 0px;
         border: 10px solid;
         border-radius: 10px;
-        z-index: -1;
+        z-index: 0;
         border-color: transparent @light-grey @light-grey transparent;
       }
     }
@@ -971,7 +976,7 @@ footer {
         background-color: @white;
         border: 1px solid #000;
         &:active {
-        background-color: @grey;
+          background-color: @grey;
         }
       }
     }
