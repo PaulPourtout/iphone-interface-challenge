@@ -184,7 +184,7 @@ $(document).ready(function(){
       $('.charging-pourcentage').text(pourcentage + '%');
       pourcentage--;
       if (pourcentage == 0) {
-        $('.no-battery').fadeIn("slow");
+        $('.no-battery').delay(1000).fadeIn("slow");
       }
 
       else if (pourcentage <= 5) {
